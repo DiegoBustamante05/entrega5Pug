@@ -1,0 +1,33 @@
+html
+    head
+        title='test pug'
+        style
+            include styles.css
+    body
+        button(class="navButton")
+            a(href="/") Form 
+        h1=title
+        div
+        if items == true
+            table
+                tr
+                    th Id
+                    th Title
+                    th Price	
+                    th Thumbnail
+            for item in products
+                    table
+                        tr
+                            td=item.id
+                            td=item.title
+                            td=item.price
+                            td
+                                img(class='product-img', src=item.thumbnail)
+        else 
+            p products not found
+
+
+
+
+
+

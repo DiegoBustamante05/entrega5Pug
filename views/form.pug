@@ -1,0 +1,15 @@
+html
+    head
+        title='Form'
+        style
+            include styles.css
+    body
+        button(class="navButton")
+            a(href="/products") Products
+        h1=msg
+        form(action="/", method="POST")
+            input(type="text", name="title", placeholder="Product name" required="true") 
+            input(type="number", name="price", placeholder="Product price" required="true")
+            input(type="text", name="thumbnail", placeholder="Product img URL" required="true")
+            div( class="button-container" )
+                button(type="submit") Upload     
